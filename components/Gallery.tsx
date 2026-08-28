@@ -4,37 +4,37 @@ import { useEffect, useState } from "react";
 
 const galleryImages = [
   {
-    src: "/images/funzi-restaurant.jpg",
+    src: "/funzirestaurant.jpg",
     title: "Funzi Beach Restaurant",
     description:
       "A relaxed coastal table for fresh seafood, local flavours, and long, unhurried lunches.",
   },
   {
-    src: "/images/funzi-island.jpg",
+    src: "/funziisland.jpg",
     title: "Funzi Island",
     description:
       "A beautiful island escape where quiet beaches, local culture, and slow coastal living meet.",
   },
   {
-    src: "/images/ramisi-estuary.jpg",
+    src: "/ramisiestuary.jpg",
     title: "Ramisi Estuary",
     description:
       "Cruise through mangroves and calm waterways shaped by the rhythms of the tide.",
   },
   {
-    src: "/images/funzi-boat.jpg",
+    src: "/funziboat.jpg",
     title: "Island Expeditions",
     description:
       "Set out on the water with our local crew for a day of discovery around Funzi.",
   },
   {
-    src: "/images/funzi-seafood.jpg",
+    src: "/seafood.jpg",
     title: "Fresh Coastal Seafood",
     description:
       "A taste of the Indian Ocean, prepared with care and served in a setting made for slowing down.",
   },
   {
-    src: "/images/funzi-mangroves.jpg",
+    src: "/mangroves.jpg",
     title: "Mangrove Moments",
     description:
       "Discover the rich, peaceful landscape that makes Funzi Island such a special place to explore.",
