@@ -3,19 +3,19 @@ const destinations = [
     name: "Funzi Island",
     label: "Island escape",
     text: "A laid-back coastal destination with local culture, beautiful views, and time to simply slow down.",
-    image: "/images/funzi-island.jpg",
+    image: "/funziisland.jpg",
   },
   {
     name: "Ramisi Estuary",
     label: "Mangroves & waterways",
     text: "Cruise through calm channels where mangroves, birdlife, and the tides set the pace.",
-    image: "/images/ramisi-estuary.jpg",
+    image: "/ramisiestuary.jpg",
   },
   {
     name: "Funzi Beach Restaurant",
     label: "Fresh seafood",
     text: "Settle in for a generous coastal meal with flavours inspired by the Indian Ocean.",
-    image: "/images/funzi-restaurant.jpg",
+    image: "/funzirestaurant.jpg",
   },
 ];
 
