@@ -65,10 +65,10 @@ const packages = [
 
 export default function Packages() {
   return (
-    <section id="packages" className="bg-amber-50 py-20">
+    <section id="packages" className="bg-slate-50 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-funzi-red">
             Experiences
           </p>
           <h2 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">

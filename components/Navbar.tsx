@@ -69,8 +69,8 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         isScrolled
-          ? "border-white/10 bg-[#083b32]/95 shadow-xl shadow-slate-950/20 backdrop-blur-xl"
-          : "border-white/15 bg-[#083b32]/85 backdrop-blur-md"
+          ? "border-white/10 bg-funzi-navy/95 shadow-xl shadow-slate-950/20 backdrop-blur-xl"
+          : "border-white/15 bg-funzi-navy/85 backdrop-blur-md"
       }`}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-5 px-4 sm:px-6 lg:h-24 lg:px-8">
@@ -119,7 +119,7 @@ export default function Navbar() {
 
           <a
             href="#contact"
-            className="rounded-full bg-amber-400 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:scale-105 hover:bg-amber-300"
+            className="rounded-full bg-funzi-red px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105 hover:bg-red-700"
           >
             Book Funzi ↗
           </a>

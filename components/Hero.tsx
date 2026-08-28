@@ -5,11 +5,11 @@ export default function Hero() {
       className="relative flex min-h-[80vh] items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(6, 40, 34, 0.6), rgba(6, 40, 34, 0.78)), url('/funziisland.jpg')",
+          "linear-gradient(rgba(11, 31, 112, 0.48), rgba(11, 31, 112, 0.52)), url('/funziisland.jpg')",
       }}
     >
       <div className="mx-auto max-w-7xl px-4 py-20 text-center text-white sm:px-6 lg:px-8">
-        <p className="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-amber-200 backdrop-blur-sm">
+        <p className="mb-4 inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-funzi-red backdrop-blur-sm">
           Funzi Beach Restaurant & Island Expeditions
         </p>
 
@@ -25,13 +25,13 @@ export default function Hero() {
         <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
           <a
             href="#contact"
-            className="rounded-full bg-amber-400 px-7 py-3 font-semibold text-slate-900 transition hover:bg-amber-300"
+            className="rounded-full bg-funzi-red px-7 py-3 font-semibold text-white transition hover:bg-red-700"
           >
             Book an Expedition
           </a>
           <a
             href="#packages"
-            className="rounded-full border border-white/40 bg-white/5 px-7 py-3 font-semibold text-white transition hover:bg-white/10"
+            className="rounded-full border border-white/40 bg-white/10 px-7 py-3 font-semibold text-white transition hover:bg-white/20"
           >
             Explore Experiences
           </a>

@@ -15,12 +15,12 @@ const galleryImages = [
     description:
       "A beautiful island escape where quiet beaches, local culture, and slow coastal living meet.",
   },
-  {
-    src: "/ramisiestuary.jpg",
-    title: "Ramisi Estuary",
-    description:
-      "Cruise through mangroves and calm waterways shaped by the rhythms of the tide.",
-  },
+  // {
+  //   src: "/ramisiestuary.jpg",
+  //   title: "Ramisi Estuary",
+  //   description:
+  //     "Cruise through mangroves and calm waterways shaped by the rhythms of the tide.",
+  // },
   {
     src: "/funziboat.jpg",
     title: "Island Expeditions",
@@ -63,7 +63,7 @@ export default function Gallery() {
       >
         <div className="mb-10 flex flex-col gap-5 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-funzi-navy">
               Gallery
             </p>
             <h2 className="mt-4 max-w-2xl text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -76,7 +76,7 @@ export default function Gallery() {
             href="https://www.facebook.com/FunziBeachRestaurant/"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex justify-center rounded-full border border-emerald-700 px-5 py-3 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-700 hover:text-white"
+            className="inline-flex justify-center rounded-full border border-funzi-navy px-5 py-3 text-sm font-semibold text-funzi-navy transition hover:bg-funzi-navy hover:text-white"
           >
             Follow on Facebook ↗
           </a>
@@ -100,7 +100,7 @@ export default function Gallery() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/15 to-transparent transition group-hover:from-slate-950/95" />
 
               <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-funzi-red">
                   {index === 0 || index === 4 ? "Restaurant" : "Expedition"}
                 </p>
                 <h3 className="mt-2 text-xl font-bold">{item.title}</h3>

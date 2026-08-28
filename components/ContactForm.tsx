@@ -32,10 +32,10 @@ export default function ContactForm() {
   );
 
   return (
-    <section id="contact" className="bg-emerald-950 py-20 text-white">
+    <section id="contact" className="bg-funzi-navy py-20 text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-funzi-red">
             Contact & booking
           </p>
           <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
@@ -99,7 +99,7 @@ export default function ContactForm() {
 
             <button
               type="submit"
-              className="rounded-full bg-emerald-700 px-5 py-3 font-semibold text-white transition hover:bg-emerald-800"
+              className="rounded-full bg-funzi-red px-5 py-3 font-semibold text-white transition hover:bg-emerald-800"
             >
               Prepare booking enquiry
             </button>
@@ -110,14 +110,14 @@ export default function ContactForm() {
               href={`https://wa.me/254726910137?text=${encodedMessage}`}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-[#25D366] px-5 py-3 text-center font-semibold text-white transition hover:bg-[#20bc59]"
+              className="rounded-full bg-funzi-green px-5 py-3 text-center font-semibold text-white transition hover:bg-[#20bc59]"
             >
               Send via WhatsApp ↗
             </a>
 
             <a
               href={`mailto:kirao@gmail.com?subject=Funzi%20Beach%20Restaurant%20Booking&body=${encodedMessage}`}
-              className="rounded-full bg-amber-400 px-5 py-3 text-center font-semibold text-slate-900 transition hover:bg-amber-300"
+              className="rounded-full bg-funzi-red px-5 py-3 text-center font-semibold text-slate-900 transition hover:bg-red-700"
             >
               Send via Email ↗
             </a>

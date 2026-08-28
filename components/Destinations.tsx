@@ -21,10 +21,10 @@ const destinations = [
 
 export default function Destinations() {
   return (
-    <section id="destinations" className="bg-emerald-50 py-20">
+    <section id="destinations" className="bg-funzi-sky/40 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-funzi-navy">
             Explore Funzi
           </p>
           <h2 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -55,7 +55,7 @@ export default function Destinations() {
                 </p>
                 <a
                   href="#contact"
-                  className="mt-5 inline-flex rounded-full bg-emerald-800 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+                  className="mt-5 inline-flex rounded-full bg-funzi-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-funzi-blue"
                 >
                   Plan your visit →
                 </a>

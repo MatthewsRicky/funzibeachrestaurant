@@ -44,7 +44,7 @@ export default function ExperienceCard({
           </span>
 
           <div className="flex items-center gap-2">
-            <span className="rounded-full bg-emerald-500/90 px-3 py-1 text-xs font-semibold text-white">
+            <span className="rounded-full bg-funzi-green px-3 py-1 text-xs font-semibold text-white">
               {duration}
             </span>
 
@@ -64,7 +64,7 @@ export default function ExperienceCard({
         <div className="mt-auto">
           {/* Always-visible card summary */}
           <div className="px-6 pb-6">
-            <p className="mb-2 text-sm font-semibold text-amber-300">
+            <p className="mb-2 text-sm font-semibold text-funzi-red">
               {highlight}
             </p>
             <h3 className="text-2xl font-bold">{name}</h3>
@@ -86,7 +86,7 @@ export default function ExperienceCard({
 
           {/* Expanded panel: colour overlay remains translucent over image */}
           {isExpanded && (
-            <div className="border-t border-white/20 bg-emerald-950/80 px-6 py-6 backdrop-blur-[3px]">
+            <div className="border-t border-white/20 bg-funzi-navy/85 px-6 py-6 backdrop-blur-[3px]">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-amber-200">
                 Your experience includes
               </p>
@@ -111,7 +111,7 @@ export default function ExperienceCard({
 
                 <a
                   href="#contact"
-                  className="rounded-full bg-amber-400 px-5 py-3 text-center text-sm font-semibold text-slate-900 transition hover:bg-amber-300"
+                  className="rounded-full bg-funzi-red px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-red-700"
                 >
                   Book this experience →
                 </a>

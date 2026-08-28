@@ -5,6 +5,15 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-funzi-navy: #24425f;
+  --color-funzi-blue: #78a6c2;
+  --color-funzi-sky: #e8f2f7;
+  --color-funzi-red: #df8a58;
+  --color-funzi-green: #4f8d78;
+  --color-funzi-ink: #26323d;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

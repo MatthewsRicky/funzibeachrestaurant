@@ -19,10 +19,10 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-slate-900 py-20 text-white">
+    <section className="bg-funzi-navy py-20 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-funzi-red">
             Why Funzi Beach Restaurant
           </p>
           <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
@@ -36,7 +36,9 @@ export default function WhyUs() {
               key={reason.title}
               className="rounded-3xl border border-white/10 bg-white/5 p-6"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-300 text-lg font-bold text-slate-900">
+              <div
+                className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-funzi-red text-lg font-bold text-white"
+              >
                 ✓
               </div>
               <h3 className="text-xl font-semibold">{reason.title}</h3>

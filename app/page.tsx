@@ -19,7 +19,7 @@ export default function Home() {
       <Packages />
       <Accommodation />
       <Gallery />
-      {/* <Testimonials /> */}
+  {/* <Testimonials /> */}
       <CTA />
       <ContactForm />
     </main>
