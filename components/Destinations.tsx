@@ -9,7 +9,7 @@ const destinations = [
     name: "Ramisi Estuary",
     label: "Mangroves & waterways",
     text: "Cruise through calm channels where mangroves, birdlife, and the tides set the pace.",
-    image: "/ramisiestuary.jpg",
+    image: "/mangroves.jpg",
   },
   {
     name: "Funzi Beach Restaurant",

@@ -1,4 +1,7 @@
-export function SiteFooter() {
+"use client";
+
+
+export function Footer() {
   return (
     <footer id="contact" className="bg-[#10362f] py-16 text-[#e3eee9]">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.2fr_.8fr_.45fr] md:px-10">

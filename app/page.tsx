@@ -3,7 +3,7 @@ import Accommodation from "@/components/Accommodation";
 import CTA from "@/components/CTA";
 import ContactForm from "@/components/ContactForm";
 import Destinations from "@/components/Destinations";
-//import Gallery from "@/components/Gallery";
+import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
 import Packages from "@/components/Packages";
 //import Testimonials from "@/components/Testimonials";
@@ -18,7 +18,7 @@ export default function Home() {
       <Destinations />
       <Packages />
       <Accommodation />
-      {/* <Gallery /> */}
+      <Gallery />
       {/* <Testimonials /> */}
       <CTA />
       <ContactForm />
