@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -69,7 +70,7 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         isScrolled
-          ? "border-white/10 bg-funzi-navy/95 shadow-xl shadow-slate-950/20 backdrop-blur-xl"
+          ? "border-white/10 bg-funzi-navy/80 shadow-xl shadow-slate-950/20 backdrop-blur-xl"
           : "border-white/15 bg-funzi-navy/85 backdrop-blur-md"
       }`}
     >
@@ -77,9 +78,18 @@ export default function Navbar() {
         <a
           href="#top"
           onClick={closeMenu}
-          className="group shrink-0 text-[9px] font-bold leading-[1.3] tracking-[.13em] text-white"
+          className="group flex items-center shrink-0 text-[9px] font-bold leading-[1.3] tracking-[.13em] text-white"
           aria-label="Funzi Beach Restaurant home"
         >
+          <span className="block text-xl tracking-[.18em] transition group-hover:text-amber-300">
+            <Image
+              src="/logo.png"
+              alt="Funzi Beach Restaurant"
+              width={50}
+              height={30}
+              className="mx-2 py-1 transition"
+            />
+          </span>
           <span className="block text-xl tracking-[.18em] transition group-hover:text-amber-300">
             FUNZI
           </span>
@@ -112,14 +122,14 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+254726910137"
-            className="text-xs font-medium text-slate-200 transition hover:text-amber-300"
+            className="text-xs font-medium text-slate-200 transition hover:text-amber-300 py-2 px-3 rounded-lg bg-funzi-green hover:bg-funzi-green/80 hover:scale-105"
           >
-            0726 910 137
+           call 0726 910 137
           </a>
 
           <a
             href="#contact"
-            className="rounded-full bg-funzi-red px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105 hover:bg-red-700"
+            className="rounded-full bg-funzi-red px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105 hover:bg-funzi-green"
           >
             Book Funzi ↗
           </a>
@@ -153,7 +163,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`overflow-hidden border-t border-white/10 bg-[#083b32] transition-all duration-300 lg:hidden ${
+        className={`overflow-hidden border-t border-white/10 bg-funzi-navy transition-all duration-300 lg:hidden ${
           isOpen ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -182,7 +192,7 @@ export default function Navbar() {
           <div className="mt-5 grid gap-3 border-t border-white/10 pt-5 sm:grid-cols-2">
             <a
               href="tel:+254726910137"
-              className="rounded-full border border-white/20 px-4 py-3 text-center text-sm font-semibold text-white"
+              className="rounded-full border bg-funzi-green hover:bg-funzi-green/80 border-white/20 px-4 py-3 text-center text-sm font-semibold text-white"
             >
               Call 0726 910 137
             </a>
@@ -190,7 +200,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={closeMenu}
-              className="rounded-full bg-amber-400 px-4 py-3 text-center text-sm font-semibold text-slate-950"
+              className="rounded-full bg-funzi-red px-4 py-3 text-center text-sm font-semibold text-slate-950"
             >
               Book a Funzi Experience ↗
             </a>
