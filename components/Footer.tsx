@@ -38,9 +38,14 @@ export function Footer() {
           <a href="#book">Make a booking →</a>
         </div>
       </div>
-      <div className="w-full flex items-center justify-center mx-auto py-8">
-        Website built by Ricky Matthews Githinji trademark 2026
-      </div>
+      <div className="flex items-center justify-between w-full px-6 py-2">
+          <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-blue-500">
+            © {new Date().getFullYear()} Funzi Island Restaurant. All rights reserved.
+          </div>
+          <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-blue-500">
+            Designed and built by Ricky Matthews Githinji.
+          </div>
+        </div>
     </footer>
   );
 }
