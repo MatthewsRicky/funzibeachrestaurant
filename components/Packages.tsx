@@ -8,7 +8,7 @@ const packages = [
     highlight: "The complete Funzi experience",
     description:
       "A full day of island excursions, mangrove scenery, beach time, and a relaxed restaurant lunch.",
-    image: "/funziisland.jpg",
+    image: "/funzi2.jpg",
     includes: [
       "Island transfer and local crew",
       "Funzi Island exploration",
@@ -23,7 +23,7 @@ const packages = [
     highlight: "Mangroves, waterways, and wildlife",
     description:
       "A scenic coastal cruise through the Ramisi estuary, with time to watch for dolphins and birdlife.",
-    image: "/ramisiestuary.jpg",
+    image: "/dolphinandestuary.jpg",
     includes: [
       "Boat excursion with local crew",
       "Mangrove and estuary cruise",

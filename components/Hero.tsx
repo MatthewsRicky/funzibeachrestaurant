@@ -5,7 +5,7 @@ export default function Hero() {
       className="relative flex min-h-[80vh] items-center overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(11, 31, 112, 0.48), rgba(11, 31, 112, 0.52)), url('/funziisland.jpg')",
+          "linear-gradient(rgba(11, 31, 112, 0.68), rgba(11, 31, 112, 0.52)), url('/funzihero.jpg')",
       }}
     >
       <div className="mx-auto max-w-7xl px-4 py-20 text-center text-white sm:px-6 lg:px-8">
