@@ -13,7 +13,7 @@ export default function CTA() {
 
         <a
           href="#contact"
-          className="rounded-full bg-white px-7 py-3 font-semibold text-funzi-navy transition hover:bg-funzi-red"
+          className="rounded-xl flex items-center justify-center bg-white px-2 py-3 font-semibold text-funzi-navy transition hover:bg-funzi-red"
         >
           Start Planning
         </a>

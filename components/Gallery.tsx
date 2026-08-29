@@ -4,23 +4,23 @@ import { useEffect, useState } from "react";
 
 const galleryImages = [
   {
-    src: "/funzirestaurant.jpg",
+    src: "/restaurant2.jpg",
     title: "Funzi Beach Restaurant",
     description:
       "A relaxed coastal table for fresh seafood, local flavours, and long, unhurried lunches.",
   },
   {
-    src: "/funzi2.jpg",
+    src: "/funzi7.jpg",
     title: "Funzi Island",
     description:
       "A beautiful island escape where quiet beaches, local culture, and slow coastal living meet.",
   },
-  // {
-  //   src: "/ramisiestuary.jpg",
-  //   title: "Ramisi Estuary",
-  //   description:
-  //     "Cruise through mangroves and calm waterways shaped by the rhythms of the tide.",
-  // },
+  {
+    src: "/ramisi2.jpg",
+    title: "Ramisi Estuary",
+    description:
+      "Cruise through mangroves and calm waterways shaped by the rhythms of the tide.",
+  },
   {
     src: "/funziboat.jpg",
     title: "Island Expeditions",

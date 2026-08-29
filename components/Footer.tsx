@@ -1,16 +1,15 @@
 "use client";
 
-
 export function Footer() {
   return (
-    <footer id="contact" className="bg-funzi-navy py-16 text-[#e3eee9]">
+    <footer id="contact" className="bg-funzi-navy/80 py-16 text-funzi-red">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.2fr_.8fr_.45fr] md:px-10">
         <div>
           <p className="text-[10px] font-bold tracking-[.13em]">
             <span className="block text-xl tracking-[.18em]">FUNZI</span>
             BEACH RESTAURANT • ISLAND EXCURSIONS
           </p>
-          <p className="mt-5 max-w-sm text-sm leading-6 text-[#b8cdc6]">
+          <p className="mt-5 max-w-sm text-sm leading-6">
             Coastal days, fresh seafood and island memories on Kenya&apos;s
             beautiful south coast.
           </p>
@@ -22,7 +21,7 @@ export function Footer() {
           </p>
           <span>Funzi Island, South Coast, Kenya</span>
           <a href="tel:+254726910137">0726 910 137</a>
-          <a href="mailto:kirao@gmail.com">kirao@gmail.com</a>
+          <a href="mailto:kiraoali@gmail.com">kiraoali@gmail.com</a>
         </div>
 
         <div className="flex flex-col items-start gap-2 text-sm">
@@ -38,6 +37,9 @@ export function Footer() {
           </a>
           <a href="#book">Make a booking →</a>
         </div>
+      </div>
+      <div className="w-full flex items-center justify-center mx-auto py-8">
+        Website built by Ricky Matthews Githinji trademark 2026
       </div>
     </footer>
   );

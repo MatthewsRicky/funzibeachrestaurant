@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Accommodation from "@/components/Accommodation";
+import BrochureSection from "@/components/BrochureSection";
 import CTA from "@/components/CTA";
 import ContactForm from "@/components/ContactForm";
 import Destinations from "@/components/Destinations";
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyUs />
       <Destinations />
       <Packages />
+      <BrochureSection />
       <Accommodation />
       <Gallery />
   {/* <Testimonials /> */}

@@ -87,7 +87,7 @@ export default function ContactForm() {
               Alternative: <a href="tel:+254756810991">0756 810 991</a>
             </p>
             <p>
-              Email: <a href="mailto:kirao@gmail.com">kirao@gmail.com</a>
+              Email: <a href="mailto:kiraoali@gmail.com">kiraoali@gmail.com</a>
             </p>
           </div>
         </div>

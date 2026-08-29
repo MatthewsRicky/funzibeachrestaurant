@@ -8,7 +8,7 @@ const packages = [
     highlight: "The complete Funzi experience",
     description:
       "A full day of island excursions, mangrove scenery, beach time, and a relaxed restaurant lunch.",
-    image: "/funzi2.jpg",
+    image: "/funzi4.jpg",
     includes: [
       "Island transfer and local crew",
       "Funzi Island exploration",
