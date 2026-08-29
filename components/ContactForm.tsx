@@ -1,35 +1,66 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { getErrorMessage } from "@/lib/validation";
+
+type Status =
+  | { type: "idle"; message: "" }
+  | { type: "success"; message: string }
+  | { type: "error"; message: string };
+
+const initialStatus: Status = { type: "idle", message: "" };
 
 export default function ContactForm() {
-  const [bookingMessage, setBookingMessage] = useState(
-    "Hello Funzi Beach Restaurant, I would like to make a booking enquiry.",
-  );
+  const [status, setStatus] = useState<Status>(initialStatus);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const data = new FormData(form);
 
-    setBookingMessage(
-      [
-        "I would like to make a Funzi Beach Restaurant booking enquiry.",
-        "",
-        `Name: ${formData.get("name") || "Not provided"}`,
-        `Phone: ${formData.get("phone") || "Not provided"}`,
-        `Email: ${formData.get("email") || "Not provided"}`,
-        `Guests: ${formData.get("guests") || "Not provided"}`,
-        `Date: ${formData.get("date") || "Flexible"}`,
-        `Experience: ${formData.get("experience") || "Not provided"}`,
-        `Message: ${formData.get("message") || "None"}`,
-      ].join("\n"),
-    );
+    const payload = {
+      fullName: data.get("fullName"),
+      email: data.get("email"),
+      phone: data.get("phone"),
+      guests: data.get("guests"),
+      date: data.get("date"),
+      experience: data.get("experience"),
+      message: data.get("message"),
+      website: data.get("website"),
+    };
+
+    setIsSubmitting(true);
+    setStatus(initialStatus);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Unable to send your enquiry.");
+      }
+
+      form.reset();
+      setStatus({
+        type: "success",
+        message: "Thank you — your booking enquiry has been sent.",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: getErrorMessage(error),
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
-
-  const encodedMessage = encodeURIComponent(
-    `Hello Funzi Beach Restaurant,\n\n${bookingMessage}`,
-  );
 
   return (
     <section id="contact" className="bg-funzi-navy py-20 text-white">
@@ -38,12 +69,14 @@ export default function ContactForm() {
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-funzi-red">
             Contact & booking
           </p>
+
           <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
             Tell us about your perfect Funzi day.
           </h2>
-          <p className="mt-6 max-w-lg text-slate-300">
-            Share your date, group size, and the experience you have in mind.
-            Then send your enquiry directly through WhatsApp or email.
+
+          <p className="mt-6 max-w-lg text-slate-200">
+            Book a restaurant visit, island expedition, dolphin cruise, or a
+            private group experience. Send an enquiry here or use WhatsApp.
           </p>
 
           <div className="mt-8 space-y-2 text-slate-200">
@@ -59,70 +92,84 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div>
-          <form
-            onSubmit={handleSubmit}
-            className="grid gap-5 rounded-3xl bg-white p-6 text-slate-900 shadow-xl"
-          >
-            <div className="grid gap-5 sm:grid-cols-2">
-              <Field label="Full name" name="name" required />
-              <Field label="Phone number" name="phone" required />
-              <Field label="Email address" name="email" type="email" />
-              <Field label="Preferred date" name="date" type="date" />
-            </div>
-
-            <div className="grid gap-5 sm:grid-cols-2">
-              <SelectField label="Guests" name="guests">
-                <option>1 guest</option>
-                <option>2 guests</option>
-                <option>3-5 guests</option>
-                <option>6+ guests</option>
-              </SelectField>
-
-              <SelectField label="Experience" name="experience">
-                <option>Funzi Island Day Expedition</option>
-                <option>Dolphin & Estuary Cruise</option>
-                <option>Seafood Lunch Experience</option>
-                <option>Private Group Escape</option>
-              </SelectField>
-            </div>
-
-            <label className="grid gap-2 text-sm font-medium">
-              Message
-              <textarea
-                name="message"
-                rows={4}
-                className="rounded-xl border border-slate-200 p-3 outline-none focus:border-emerald-600"
-                placeholder="Tell us more about your plans..."
-              />
+        <form
+          onSubmit={handleSubmit}
+          className="grid gap-5 rounded-3xl bg-white p-6 text-funzi-ink shadow-xl"
+        >
+          <div className="hidden" aria-hidden="true">
+            <label>
+              Website
+              <input name="website" tabIndex={-1} autoComplete="off" />
             </label>
-
-            <button
-              type="submit"
-              className="rounded-full bg-funzi-red px-5 py-3 font-semibold text-white transition hover:bg-emerald-800"
-            >
-              Prepare booking enquiry
-            </button>
-          </form>
-
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            <a
-              href={`https://wa.me/254726910137?text=${encodedMessage}`}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full bg-funzi-green px-5 py-3 text-center font-semibold text-white transition hover:bg-[#20bc59]"
-            >
-              Send via WhatsApp ↗
-            </a>
-
-            <a
-              href={`mailto:kirao@gmail.com?subject=Funzi%20Beach%20Restaurant%20Booking&body=${encodedMessage}`}
-              className="rounded-full bg-funzi-red px-5 py-3 text-center font-semibold text-slate-900 transition hover:bg-red-700"
-            >
-              Send via Email ↗
-            </a>
           </div>
-        </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            <Field label="Full name" name="fullName" required />
+            <Field label="Phone number" name="phone" />
+            <Field label="Email address" name="email" type="email" required />
+            <Field label="Preferred date" name="date" type="date" />
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            <SelectField label="Guests" name="guests">
+              <option value="">Select guest count</option>
+              <option>1 guest</option>
+              <option>2 guests</option>
+              <option>3-5 guests</option>
+              <option>6+ guests</option>
+            </SelectField>
+
+            <SelectField label="Experience" name="experience">
+              <option value="">Select an experience</option>
+              <option>Funzi Island Day Expedition</option>
+              <option>Dolphin & Estuary Cruise</option>
+              <option>Seafood Lunch Experience</option>
+              <option>Private Group Escape</option>
+            </SelectField>
+          </div>
+
+          <label className="grid gap-2 text-sm font-medium">
+            Message
+            <textarea
+              name="message"
+              rows={4}
+              required
+              maxLength={2000}
+              className="rounded-xl border border-slate-200 p-3 outline-none focus:border-funzi-blue"
+              placeholder="Tell us more about your plans..."
+            />
+          </label>
+
+          {status.type !== "idle" && (
+            <p
+              className={`rounded-xl px-4 py-3 text-sm ${
+                status.type === "success"
+                  ? "bg-funzi-sky text-funzi-navy"
+                  : "bg-red-50 text-red-700"
+              }`}
+              role="status"
+            >
+              {status.message}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="rounded-full bg-funzi-red px-5 py-3 font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {isSubmitting ? "Sending enquiry..." : "Send booking enquiry"}
+          </button>
+
+          <a
+            href="https://wa.me/254726910137?text=Hello%20Funzi%20Beach%20Restaurant%2C%20I%20would%20like%20to%20make%20a%20booking%20enquiry."
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-funzi-green px-5 py-3 text-center font-semibold text-white transition hover:bg-green-800"
+          >
+            Prefer WhatsApp? Book here ↗
+          </a>
+        </form>
       </div>
     </section>
   );
@@ -146,7 +193,8 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="rounded-xl border border-slate-200 p-3 outline-none focus:border-emerald-600"
+        maxLength={type === "email" ? 150 : 100}
+        className="rounded-xl border border-slate-200 p-3 outline-none focus:border-funzi-blue"
       />
     </label>
   );
@@ -166,7 +214,8 @@ function SelectField({
       {label}
       <select
         name={name}
-        className="rounded-xl border border-slate-200 p-3 outline-none focus:border-emerald-600"
+        required
+        className="rounded-xl border border-slate-200 bg-white p-3 outline-none focus:border-funzi-blue"
       >
         {children}
       </select>
