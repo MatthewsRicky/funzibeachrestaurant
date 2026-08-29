@@ -10,7 +10,7 @@ const galleryImages = [
       "A relaxed coastal table for fresh seafood, local flavours, and long, unhurried lunches.",
   },
   {
-    src: "/funziisland.jpg",
+    src: "/funzi2.jpg",
     title: "Funzi Island",
     description:
       "A beautiful island escape where quiet beaches, local culture, and slow coastal living meet.",

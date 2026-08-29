@@ -3,7 +3,7 @@ const destinations = [
     name: "Funzi Island",
     label: "Island escape",
     text: "A laid-back coastal destination with local culture, beautiful views, and time to simply slow down.",
-    image: "/funziisland.jpg",
+    image: "/funzi2.jpg",
   },
   {
     name: "Ramisi Estuary",
