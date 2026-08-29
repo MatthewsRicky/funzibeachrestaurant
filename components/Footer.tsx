@@ -38,11 +38,11 @@ export function Footer() {
           <a href="#book">Make a booking →</a>
         </div>
       </div>
-      <div className="flex items-center justify-between w-full px-6 py-2">
-          <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-blue-500">
+      <div className="flex flex-col sm:flex-row items-center justify-around w-full px-6 py-2">
+          <div className="mt-12 border-t border-slate-200 pt-6 text-sm">
             © {new Date().getFullYear()} Funzi Island Restaurant. All rights reserved.
           </div>
-          <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-blue-500">
+          <div className="mt-12 border-t border-slate-200 pt-6 text-sm">
             Designed and built by Ricky Matthews Githinji.
           </div>
         </div>
