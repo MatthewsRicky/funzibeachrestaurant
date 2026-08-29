@@ -121,7 +121,7 @@ export default function ContactForm() {
 
             <SelectField label="Experience" name="experience">
               <option value="">Select an experience</option>
-              <option>Funzi Island Day Expedition</option>
+              <option>Funzi Island Day Excursion</option>
               <option>Dolphin & Estuary Cruise</option>
               <option>Seafood Lunch Experience</option>
               <option>Private Group Escape</option>

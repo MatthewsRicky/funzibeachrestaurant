@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <div className="mx-auto max-w-7xl px-4 py-20 text-center text-white sm:px-6 lg:px-8">
         <p className="mb-4 inline-flex rounded-full border border-white/25 bg-white/95 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-blue-700 backdrop-blur-sm">
-          Funzi Beach Restaurant & Island Expeditions
+          Funzi Beach Restaurant & Island Excursions
         </p>
 
         <h1 className="mx-auto max-w-4xl text-4xl font-black tracking-tight sm:text-5xl lg:text-7xl">

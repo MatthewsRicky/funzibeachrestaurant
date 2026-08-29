@@ -74,7 +74,7 @@ export default function Navbar() {
           : "border-white/15 bg-funzi-navy/85 backdrop-blur-md"
       }`}
     >
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-5 px-4 sm:px-6 lg:h-24 lg:px-8">
+      <nav className="mx-auto flex h-20 min-w-0 max-w-7xl items-center justify-between gap-3 overflow-hidden px-4 sm:px-6 lg:h-24 lg:gap-5 lg:px-8">
         <a
           href="#top"
           onClick={closeMenu}

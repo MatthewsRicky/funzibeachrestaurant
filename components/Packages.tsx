@@ -2,12 +2,12 @@ import ExperienceCard from "@/components/ExperienceCard";
 
 const packages = [
   {
-    name: "Funzi Island Day Expedition",
+    name: "Funzi Island Day Excursion",
     category: "Island adventure",
     duration: "Full day",
     highlight: "The complete Funzi experience",
     description:
-      "A full day of island exploration, mangrove scenery, beach time, and a relaxed restaurant lunch.",
+      "A full day of island excursions, mangrove scenery, beach time, and a relaxed restaurant lunch.",
     image: "/funziisland.jpg",
     includes: [
       "Island transfer and local crew",
@@ -57,7 +57,7 @@ const packages = [
     includes: [
       "Tailored experience planning",
       "Flexible group timing",
-      "Restaurant and expedition options",
+      "Restaurant and excursion options",
       "Direct WhatsApp booking support",
     ],
   },
